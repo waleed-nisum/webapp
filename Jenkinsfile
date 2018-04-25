@@ -17,6 +17,12 @@ MAVEN_HOME = '/root/maven/apache-maven-3.5.3'
               }
          }
         
+        stage('Deploy_WebApp') {
+            steps {
+              sh 'scp target/WebApp.war devops@10.4.40.155:/home/vagrant/tomcat/apache-tomcat-9.0.6'
+              }
+         }
+        
         
   }
   
